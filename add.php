@@ -12,7 +12,7 @@
         $photo=$_POST['photo'];
         
         // INSERTION DANS LES BD 
-        $sql = "INSERT INTO `employe`(`Matricule`, `Nom`, `Prénom`, `Naissance`, `Département`, `Salaire`, `Fonction`, `Photo`) 
+        $sql = "INSERT INTO `employe`(`Id`, `LastName`, `FirstName`, `Birth`, `Department`, `Salary`, `Fun_ction`, `Photo`) 
         values ('$mtric', '$lname', '$fname',  '$date', '$depart', '$salary', '$funtion', '$photo')";
         $result = mysqli_query($con, $sql);
         if($result){
@@ -50,9 +50,9 @@
         <div class="container">
                     <form action="add.php" method="POST">
 
-            <label for="basic-url" class="form-label lead">Matricule</label>
+            <!-- <label for="basic-url" class="form-label lead">Matricule</label> -->
                 <div class="input-group mb-3 w-25">
-                    <input type="text" name="matricule" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    <input type="hidden" name="matricule" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                 </div>
 
             <label for="basic-url" class="form-label lead">Nom</label>

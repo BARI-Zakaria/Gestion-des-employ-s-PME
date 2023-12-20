@@ -1,17 +1,17 @@
 <!-- MODIFICATIONS DANS LES BD  -->
 <?php
     include 'connexion.php';
-    $row['Matricule']=$_GET['updatematricule'];
-    $sql="SELECT * FROM `employe` where Matricule=$row[Matricule]";
+    $row['Id']=$_GET['updatematricule'];
+    $sql="SELECT * FROM `employe` where Id=$row[Id]";
     $result=mysqli_query($con,$sql);
     $row=mysqli_fetch_assoc($result);
-    $mtric=$row['Matricule'];
-    $lname=$row['Nom'];
-    $fname=$row['Prénom'];
-    $date=$row['Naissance'];
-    $depart=$row['Département'];
-    $salary=$row['Salaire'];
-    $funtion=$row['Fonction'];
+    $mtric=$row['Id'];
+    $lname=$row['LastName'];
+    $fname=$row['FirstName'];
+    $date=$row['Birth'];
+    $depart=$row['Department'];
+    $salary=$row['Salary'];
+    $funtion=$row['Fun_ction'];
     $photo=$row['Photo'];
 
 
@@ -56,43 +56,43 @@
             <label for="basic-url" class="form-label lead">Matricule</label>
                 <div class="input-group mb-3 w-25">
                     <input type="text" name="matricule" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-                     value=<?php echo "$row[Matricule]" ?>>
+                     value=<?php echo "$row[Id]" ?>>
                 </div>
 
             <label for="basic-url" class="form-label lead">Nom</label>
                 <div class="input-group mb-3 w-50">
                     <input type="text" name="nom" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-                     value=<?php echo "$row[Nom]"; ?>>
+                     value=<?php echo "$row[LastName]"; ?>>
                 </div>
             
             <label for="basic-url" class="form-label lead">Prénom</label>
                 <div class="input-group mb-3 w-50">
                     <input type="text" name="prenom" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-                     value=<?php echo "$row[Prénom]"; ?>>
+                     value=<?php echo "$row[FirstName]"; ?>>
                 </div>
 
             <label for="basic-url" class="form-label lead">Date de naissance</label>
                 <div class="input-group mb-3 w-50">
                     <input type="date" name="naissance" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-                     value=<?php echo "$row[Naissance]"; ?>>
+                     value=<?php echo "$row[Birth]"; ?>>
                 </div>
 
             <label for="basic-url" class="form-label lead">Département</label>
                 <div class="input-group mb-3 w-50">
                     <input type="text" name="departement" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-                     value=<?php echo "$row[Département]"; ?>>
+                     value=<?php echo "$row[Department]"; ?>>
                 </div>
 
             <label for="basic-url" class="form-label lead">Salaire</label>
                 <div class="input-group mb-3 w-50">
                     <input type="text" name="salaire" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-                     value=<?php echo "$row[Salaire]"; ?>>
+                     value=<?php echo "$row[Salary]"; ?>>
                 </div>
 
             <label for="basic-url" class="form-label lead">Fonction</label>
                 <div class="input-group mb-3 w-50">
                     <input type="text" name="fonction" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-                     value=<?php echo "$row[Fonction]"; ?>>
+                     value=<?php echo "$row[Fun_ction]"; ?>>
                 </div>
 
             <label for="basic-url" class="form-label lead">Photo</label>

@@ -48,19 +48,19 @@
                 if($result){
                     while($row=mysqli_fetch_assoc($result)){
                         echo '<tr>
-                        <th scope=row>'.$row['Matricule'].'</th>
-                        <td>'.$row['Nom'].'</td>
-                        <td>'.$row['Prénom'].'</td>
-                        <td>'.$row['Naissance'].'</td>
-                        <td>'.$row['Département'].'</td>
-                        <td>'.$row['Salaire'].'</td>
-                        <td>'.$row['Fonction'].'</td>
+                        <th scope=row>'.$row['Id'].'</th>
+                        <td>'.$row['LastName'].'</td>
+                        <td>'.$row['FirstName'].'</td>
+                        <td>'.$row['Birth'].'</td>
+                        <td>'.$row['Department'].'</td>
+                        <td>'.$row['Salary'].'</td>
+                        <td>'.$row['Fun_ction'].'</td>
                         <td>'.$row['Photo'].'</td>
                         <td>
                         <div class="order d-flex">
-                            <button type="button" class="btn btn-primary mx-5"><a href="edit.php?updatematricule='.$row['Matricule'].'">
+                            <button type="button" class="btn btn-primary mx-5"><a href="edit.php?updatematricule='.$row['Id'].'">
                             Modifier</a></button>
-                            <button type="button" class="btn btn-danger"><a href="delete.php?deletematricule='.$row['Matricule'].'">Supprimer</a></button>
+                            <button type="button" class="btn btn-danger"><a href="delete.php?deletematricule='.$row['Id'].'">Supprimer</a></button>
                         </div>
                         </td>
                       </tr>';
