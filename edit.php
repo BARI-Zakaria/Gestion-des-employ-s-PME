@@ -1,10 +1,12 @@
 <!-- MODIFICATIONS DANS LES BD  -->
 <?php
     include 'connexion.php';
+
     $row['Id']=$_GET['updatematricule'];
     $sql="SELECT * FROM `employe` where Id=$row[Id]";
     $result=mysqli_query($con,$sql);
     $row=mysqli_fetch_assoc($result);
+
     $mtric=$row['Id'];
     $lname=$row['LastName'];
     $fname=$row['FirstName'];
@@ -26,7 +28,7 @@
         $photo=$_POST['photo'];
         
         // modifier DANS LES BD 
-        $sql="UPDATE FROM `employe` set Matricule=$row[Matricule],Nom=$row[Nom],Prénom=$row[Prénom],Naissace=$row[Naissance],Département=$row[Département],Salaire=$row[Salaire],Fonction=$row[Fonction],Photo=$row[Photo] where Matricule=$row[Matricule]";
+        $sql="UPDATE FROM `employe` set LastName=$lname,FirstName=$fname,Birth=$date,Department=$depart,Salary=$salary,Fun_ction=$funtion,Photo=$photo where Id=$mtric";
         $result=mysqli_query($con, $sql);
         if($result){
             header('location:index.php');
@@ -102,7 +104,7 @@
                 </div>
 
             <div class="input-group mb-3">
-                <button class="btn btn-outline-primary" type="submit" id="button-addon1" name="submit">Modifier</button>
+                <button class="btn btn-outline-success" type="submit" id="button-addon1" name="submit">Modifier</button>
             </div>
         </form>
         </div>

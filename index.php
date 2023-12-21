@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!--link CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- link CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!--Link Bootstrap-->
     <title>Gestion des employés PME</title>
 </head>
@@ -29,7 +29,7 @@
 
     </header>
     <main>
-        <table class="table w-100 mt-5 mx-auto">
+        <table class="  ">
             <thead class="table-light table-responsive-sm">
                 <th>Matricule</th>
                 <th>Nom</th>
@@ -58,9 +58,9 @@
                         <td>'.$row['Photo'].'</td>
                         <td>
                         <div class="order d-flex">
-                            <button type="button" class="btn btn-primary mx-5"><a href="edit.php?updatematricule='.$row['Id'].'">
+                            <button type="button" id="edit"><a href="edit.php?updatematricule='.$row['Id'].'">
                             Modifier</a></button>
-                            <button type="button" class="btn btn-danger"><a href="delete.php?deletematricule='.$row['Id'].'">Supprimer</a></button>
+                            <button type="button" id="delete"><a href="delete.php?deletematricule='.$row['Id'].'">Supprimer</a></button>
                         </div>
                         </td>
                       </tr>';

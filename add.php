@@ -15,12 +15,13 @@
         $sql = "INSERT INTO `employe`(`Id`, `LastName`, `FirstName`, `Birth`, `Department`, `Salary`, `Fun_ction`, `Photo`) 
         values ('$mtric', '$lname', '$fname',  '$date', '$depart', '$salary', '$funtion', '$photo')";
         $result = mysqli_query($con, $sql);
-        if($result){
+        if(!$result){
+            die('Error!' . mysqli_error($con));
+        }else{
             header('location:index.php');
-            // echo "HADCHI MAKHEDAMCH !";
         }
     }
-
+    // ON DUPLICATE KEY UPDATE Id=$mtric
 ?>
                 <!-- ------------------- -->
 
@@ -91,7 +92,7 @@
                 </div>
 
             <div class="input-group mb-3">
-                <button class="btn btn-outline-primary" type="submit" id="button-addon1" name="submit">Ajouter</button>
+                <button class="btn btn-outline-success" type="submit" id="button-addon1" name="submit">Ajouter</button>
             </div>
         </form>
         </div>

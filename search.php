@@ -45,8 +45,8 @@ function filterTable($query){
 
         <form action="" method="POST">
             <div class="input-group m-3 w-25">
-                <input type="text" name="vts" class="form-control" placeholder="Chercher un employe" aria-label="Recipient's username"     aria-describedby="button-addon2">
-                <button class="btn btn-outline-primary" type="submit" name="search" id="button-addon2">Chercher</button>
+                <input type="text" name="vts" class="form-control" placeholder="Chercher un employe" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-success" type="submit" name="search" id="button-addon2">Chercher</button>
             </div>
         </form>
 
